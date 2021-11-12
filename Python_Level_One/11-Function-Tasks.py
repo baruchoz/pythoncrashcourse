@@ -14,10 +14,19 @@
 ## a Boolean True if their sum is 10, False if their sum is something else.
 
 def check_ten(n1,n2):
-    # Code Here
-    pass
+    if n1 + n2 != 10:
+        return False
+    else:
+        return True
 
+check_ten(2,8)
+check_ten(2,11)
 
+def check_ten(n1,n2):
+    return (n1+n2) == 10
+
+check_ten(2,8)
+check_ten(2,11)
 
 # ## Task 2
 #
@@ -25,9 +34,13 @@ def check_ten(n1,n2):
 # sum is 10, otherwise, return the actual sum value.
 
 def check_ten_sum(n1,n2):
-    # Code Here
-    pass
+    if n1 + n2 == 10:
+        return True
+    else:
+        return n1+n2
 
+check_ten_sum(3,7)
+check_ten_sum(3,20)
 
 
 # ## Task 3
@@ -38,8 +51,8 @@ def check_ten_sum(n1,n2):
 
 
 def first_upper(mystring):
-    # Code Here
-
+    return mystring[0].upper()
+first_upper("t should be upper")
 
 
 # ## Task 4
@@ -52,8 +65,14 @@ def first_upper(mystring):
 
 
 def last_two(mystring):
-    # Code Here
-    pass
+    if len(mystring) > 2:
+        return mystring[-2:]
+    else:
+        return "Error"
+
+last_two("Hello")
+last_two("No") 
+
 
 
 # ## Task 5
@@ -80,9 +99,11 @@ def seq_check(nums):
 
 def compare_len(s1,s2):
     # Code Here
-    pass
+    return abs(len(s1)-len(s2))
 
-
+compare_len("44","44")
+compare_len("44","4")
+compare_len("4567","4")
 
 # ## Task 7
 #
@@ -93,6 +114,14 @@ def compare_len(s1,s2):
 
 
 def sum_or_max(mylist):
-
     # Code Here
-    pass
+    length=len(mylist)
+    if length % 2 == 0:
+        print("Even List Sum: ")
+        return sum(mylist)
+    else:
+        print("Odd List Max: ")
+        return max(mylist)
+
+sum_or_max([1,2,3,4,5])
+sum_or_max([1,2,3,4,5,6])
