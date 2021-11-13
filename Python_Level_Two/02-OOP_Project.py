@@ -22,7 +22,23 @@
 
 
 class Account:
-    pass
+    
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+
+    def __repr__(self):
+        return f"Account Owner:  {self.owner} \nAccount Balance: ${self.balance}"
+    
+    def deposit(self, deposit_amount):
+        self.balance += deposit_amount
+
+    def withdraw(self, withdraw_amount):
+        if self.balance >= withdraw_amount:
+            self.balance -= withdraw_amount
+            print("Withdrawal Accepted")
+        else:
+            print("Funds Unavailable")
 
 
 # 1. Instantiate the class
